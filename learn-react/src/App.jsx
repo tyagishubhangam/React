@@ -1,8 +1,8 @@
-import ColorApp from "./ColorApp.jsx";
+import Counter from "./Counter.jsx";
 function App() {
   return(
     <>
-    <ColorApp />
+   <Counter />
     </>
   )
   
