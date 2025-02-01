@@ -1,9 +1,11 @@
-import MyComponent from "./Mycomponent.jsx";
+import ColorApp from "./ColorApp.jsx";
 function App() {
-    return(
-      <>
-      <MyComponent />
-      </>
-    );
-};
-export default App
+  return(
+    <>
+    <ColorApp />
+    </>
+  )
+  
+}
+
+export default App;
