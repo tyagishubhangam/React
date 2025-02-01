@@ -40,3 +40,23 @@
 
 
 }
+
+.counter-container{
+  text-align: center;
+}
+
+.counter-display{
+  font-size: 200px;
+  margin: 0;
+  
+}
+.counter-button{
+  background-color: rgb(7, 162, 228);
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  width: 150px;
+  font-size: large;
+  border: none;
+}
