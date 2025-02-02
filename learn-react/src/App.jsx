@@ -1,8 +1,8 @@
-import Car from "./Car.jsx";
+import Cart from "./Cart.jsx";
 function App() {
   return(
     <>
-   <Car />
+   <Cart />
     </>
   )
   
