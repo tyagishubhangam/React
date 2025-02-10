@@ -10,6 +10,7 @@ function MyComponent(){
     
       return () => {
         window.removeEventListener("resize", handleResize);
+        //this is clearnup code we are removing an eventlisterner ie. we are cleaning 
 
       }
     }, [])
