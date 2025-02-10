@@ -1,8 +1,8 @@
-import Garage from "./Garage.jsx";
+import MyComponent from "./MyComponent.jsx";
 function App() {
   return(
     <>
-   <Garage />
+   <MyComponent />
     </>
   )
   
