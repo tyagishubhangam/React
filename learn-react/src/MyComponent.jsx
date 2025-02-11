@@ -1,39 +1,50 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect,useRef} from 'react';
 
 
 function MyComponent(){
-    const [width, setWidth] = useState(window.innerWidth);
-    const [height, setHeight] = useState(window.innerHeight);
+    const inputRef1 = useRef(null);
+    const inputRef2 = useRef(null);
+    const inputRef3 = useRef(null);
+    
 
     useEffect(() => {
-      window.addEventListener("resize", handleResize);
-    
-      return () => {
-        window.removeEventListener("resize", handleResize);
-        //this is clearnup code we are removing an eventlisterner ie. we are cleaning 
+      console.log("Component Rendered");
+    },);
 
-      }
-    }, [])
-
-    useEffect(()=>{
-        document.title=`Dimensions:${width} X ${height}`
-    })
-    
-
-    function handleResize() {
-        setHeight(window.innerHeight);
-        setWidth(window.innerWidth);
+    function handleRef1() {
+        inputRef1.current.focus();
+        inputRef1.current.style.backgroundColor = "pink";
+        inputRef2.current.style.backgroundColor = "";
+        inputRef3.current.style.backgroundColor = "";
         
     }
-
+    function handleRef2() {
+        inputRef2.current.focus();
+        inputRef2.current.style.backgroundColor = "pink";
+        inputRef1.current.style.backgroundColor = "";
+        inputRef3.current.style.backgroundColor = "";
+        
+    }
+    function handleRef3() {
+        inputRef3.current.focus();
+        inputRef3.current.style.backgroundColor = "pink";
+        inputRef2.current.style.backgroundColor = "";
+        inputRef1.current.style.backgroundColor = "";
+        
+    }
+    
    
     return(
-        <>
-        <h1>My Window Dimensions</h1>
-        <br />
-        <h2>Width:{width}</h2>
-        <h2>Height:{height}</h2>
-        </>
+        <div>
+            <button onClick={handleRef1}>Click Me 1</button>
+            <input  ref={inputRef1} />
+            <br />
+            <button onClick={handleRef2}>Click Me 2</button>
+            <input  ref={inputRef2} />
+            <br />
+            <button onClick={handleRef3}>Click Me 3</button>
+            <input  ref={inputRef3} />
+        </div>
     )
 }
 
